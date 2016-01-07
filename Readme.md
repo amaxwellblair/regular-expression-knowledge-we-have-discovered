@@ -19,7 +19,9 @@
 * `/M*/` Zero or more of its target
 * `/./` match any character
 * `/^M/` matches its target if target exists at the beginning of a line in a string
-* 
+* `a{3}`	Exactly three of its target as many matches exist
+* `a{3,}`	Three or greater than its target as many matches exist
+* `a{3,6}`	Three to six of target as many matches exist
 
 ## Still unknown
 * `[abc]`	A single character of: a, b, or c
@@ -29,7 +31,7 @@
 * `^`	Start of line
 * `$`	End of line
 * `\A`	Start of string
-* `\z`	Matches targets (".." in example) starting from the end of the string and working backwards from there. 
+* `\z`	Matches targets (".." in example) starting from the end of the string and working backwards from there.
 *     EXAMPLE: "Joshua Mejia [7:58 PM]"[(/..\z/]) => "M]" vs. "Joshua Mejia [7:58 PM]"[(/...\z/]) => "PM]"
 * `\s`	Any whitespace character
 * `\S`	Any non-whitespace character
@@ -43,9 +45,6 @@
 * `a?`	Zero or one of a
 * `a*`	Zero or more of a
 * `a+`	One or more of a
-* `a{3}`	Exactly 3 of a
-* `a{3,}`	3 or more of a
-* `a{3,6}`	Between 3 and 6 of a
 
 ## Open questions:
 
